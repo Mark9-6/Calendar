@@ -4,6 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 
 function Login() {
   const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+  console.log(VITE_BACKEND_URL)
   const navigate = useNavigate();
 
   const googleAuth = () => {
