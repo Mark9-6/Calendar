@@ -11,9 +11,7 @@ function App() {
   
   
   console.log(import.meta.env.VITE_BACKEND_URL);
-  console.log(import.meta.env.VITE_BACKEND_URL);
-  console.log(import.meta.env.VITE_BACKEND_URL);
-  console.log(import.meta.env.VITE_BACKEND_URL);
+
   const getUser = async () => {
     try {
       const url = `${import.meta.env.VITE_BACKEND_URL}/auth/login/success`;
@@ -22,6 +20,7 @@ function App() {
       const { data } = await axios.get(url, { withCredentials: true });
 
       setUser(data.user._json); // Store the user data
+      console.log(user);
 
     } catch (error) {
       console.log("error:" + error); // Log any error that occurs during the API call
