@@ -13,7 +13,7 @@ passport.use(new GoogleStrategy(
     {
         clientID:process.env.GOOGLE_CLIENT_ID,
         clientSecret:process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: `https://calendar-frontend-sand.vercel.app/auth/google/callback`,
+        callbackURL: `https://calendar-server-xi.vercel.app/auth/google/callback`,
         scope:["profile","email","https://www.googleapis.com/auth/calendar.readonly"],
     },
     function (accessToken,refreshToken,profile,callback){
