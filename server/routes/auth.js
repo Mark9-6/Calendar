@@ -16,6 +16,7 @@ router.get("/login/success", (req,res)=>{
         // console.log("access token is")
         // console.log(req.user.accessToken)
         // console.log(req.user)
+        console.log("/login/success route hit")
             res.status(200).json({success:true,message:"Succcessfully logged in",
             user:req.user})
     }
@@ -46,6 +47,7 @@ router.get(
 );
 
 router.get("/google" , passport.authenticate("google",
+    console.log("/google route hit")
     ["profile","email","https://www.googleapis.com/auth/calendar.readonly"]
 ))
 
